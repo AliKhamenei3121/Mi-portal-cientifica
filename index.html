@@ -40,7 +40,7 @@
 
         .hidden { display: none !important; }
 
-        /* Estilo del Logo Oficial UCSUR Corregido */
+        /* Estilo del Logo Oficial UCSUR Corregido (Sin A naranja) */
         .ucsour-logo {
             display: inline-flex;
             flex-direction: column;
@@ -59,9 +59,6 @@
             letter-spacing: 1px;
             color: #ffffff;
             text-transform: uppercase;
-        }
-        .ucsour-logo .main-cientifica span {
-            color: var(--accent-orange);
         }
         .ucsour-logo .sub-sur {
             font-size: 9px;
@@ -448,10 +445,43 @@
             margin-bottom: 15px;
         }
 
+        /* Welcome Banner Card (Igual a la foto 2) */
+        .welcome-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 25px;
+            border: 1px solid #eef1f6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .welcome-text h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a2b4c;
+            margin-bottom: 8px;
+        }
+
+        .welcome-text p {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            max-width: 450px;
+            line-height: 1.4;
+        }
+
+        .welcome-illustration {
+            width: 110px;
+            height: auto;
+        }
+
         /* News Section */
         .news-container-box {
             background: #ffffff;
-            border-radius: 12px;
+            border-radius: 16px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             overflow: hidden;
             border: 1px solid #eef1f6;
@@ -521,6 +551,13 @@
             border: 1px solid #eef1f6;
         }
 
+        .date-title-widget {
+            font-size: 13px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
         .schedule-box {
             text-align: center;
             padding: 10px 0;
@@ -561,7 +598,7 @@
         .quick-text h5 { font-size: 12px; font-weight: 700; }
         .quick-text p { font-size: 10px; color: #777; }
 
-        /* ==================== VISTA NOTAS (SIN CUADRADITOS PERO EDITABLE) ==================== */
+        /* ==================== VISTA NOTAS ==================== */
         #notes-view {
             padding: 30px;
             flex: 1;
@@ -678,7 +715,6 @@
             font-weight: 700;
         }
 
-        /* Inputs editables limpios sin bordes aparentes hasta que pasas el mouse o editas */
         .grades-table input.editable-input, 
         .course-detail-card input[type="text"] {
             border: 1px solid transparent;
@@ -808,7 +844,7 @@
         }
         .btn-save:hover { background: #1450c7; }
 
-        /* ==================== MEDIA QUERIES (MÓVIL REORGANIZADO) ==================== */
+        /* ==================== MEDIA QUERIES ==================== */
         @keyframes slideInLeft {
             from { transform: translateX(-100%); }
             to { transform: translateX(0); }
@@ -877,7 +913,7 @@
         <div class="login-header">
             <div class="ucsour-logo">
                 <span class="top-uni">UNIVERSIDAD</span>
-                <span class="main-cientifica">CIENTÍFICA<span>A</span></span>
+                <span class="main-cientifica">CIENTÍFICA</span>
                 <span class="sub-sur">DEL SUR</span>
             </div>
         </div>
@@ -937,15 +973,15 @@
                 <button class="mobile-menu-btn" onclick="toggleMobileSidebar()"><i class="fa-solid fa-bars"></i></button>
                 <div class="ucsour-logo">
                     <span class="top-uni">UNIVERSIDAD</span>
-                    <span class="main-cientifica">CIENTÍFICA<span>A</span></span>
+                    <span class="main-cientifica">CIENTÍFICA</span>
                     <span class="sub-sur">DEL SUR</span>
                 </div>
             </div>
             <div class="user-profile-btn" id="user-profile-toggle" onclick="toggleDropdown(event)">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" id="header-avatar" class="user-avatar-img" alt="Foto Usuario">
                 <div class="user-details-text">
-                    <div class="user-name-display" id="display-name">Hitler</div>
-                    <div class="user-code-display" id="display-code">1273672</div>
+                    <div class="user-name-display" id="display-name">Alvaro Alata</div>
+                    <div class="user-code-display" id="display-code">100224207</div>
                 </div>
                 <i class="fa-solid fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i>
             </div>
@@ -954,8 +990,8 @@
         <!-- Dropdown Pop-up -->
         <div class="profile-dropdown hidden" id="profile-popup">
             <div class="dropdown-header-info">
-                <div class="dropdown-name" id="pop-name">Bennito Mussolini</div>
-                <div class="dropdown-email" id="pop-email">1103132227@cientifica.edu.pe</div>
+                <div class="dropdown-name" id="pop-name">Alvaro Alata</div>
+                <div class="dropdown-email" id="pop-email">100224207@cientifica.edu.pe</div>
             </div>
             <div class="dropdown-menu-item" onclick="abrirModalEditar()">
                 <i class="fa-regular fa-user"></i>
@@ -1040,6 +1076,16 @@
                 <!-- VISTA 1: INICIO -->
                 <main class="content-area" id="view-inicio">
                     <div class="left-main-content">
+                        <!-- Tarjeta de Bienvenida exacta a la foto 2 -->
+                        <div class="welcome-card">
+                            <div class="welcome-text">
+                                <h2>¡Hola Alvaro! Bienvenido.</h2>
+                                <p>"Esfuérzate, supera las dificultades y crea tu propia historia de éxito"</p>
+                                <span style="font-size: 10px; color: #888; display: block; margin-top: 4px;">Fernando H. Lee</span>
+                            </div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="welcome-illustration" alt="Estudiante Ilustración">
+                        </div>
+
                         <div class="section-title">Eventos y Noticias</div>
                         <div class="news-container-box">
                             <div class="news-item">
@@ -1076,6 +1122,7 @@
 
                     <div class="right-widgets">
                         <div class="widget-card">
+                            <div class="date-title-widget">Miércoles, 11 de Noviembre</div>
                             <div class="schedule-box">
                                 <div class="schedule-icon-circle"><i class="fa-solid fa-sun"></i></div>
                                 <p>No tienes clases ahora</p>
@@ -1130,10 +1177,10 @@
                         <!-- Detalle y notas del curso -->
                         <div class="course-detail-card">
                             <div style="margin-bottom: 15px;">
-                                <input type="text" id="det-nombre-curso" value="Biologia" style="font-size: 18px; font-weight: 700; color: #1b4985; width: 100%; max-width: 300px;" oninput="sincronizarNombreCurso()">
+                                <input type="text" id="det-nombre-curso" value="Biología" style="font-size: 18px; font-weight: 700; color: #1b4985; width: 100%; max-width: 300px;" oninput="sincronizarNombreCurso()">
                             </div>
                             
-                            <div class="course-info-meta" style="font-size: 11px;"><strong>Docente:</strong> <input type="text" id="det-docente" value="Pepito , SCRISTO CRATAo" style="width: 100%; font-size: 11px; margin-top: 2px;"></div>
+                            <div class="course-info-meta" style="font-size: 11px;"><strong>Docente:</strong> <input type="text" id="det-docente" value="Kingleono" style="width: 100%; font-size: 11px; margin-top: 2px;"></div>
                             <div class="course-info-meta" style="margin-top: 6px; font-size: 11px;"><strong>Teoría:</strong> <input type="text" id="det-teoria" value="Lunes 7:00 AM - 8:40 AM" style="width: 100%; max-width: 250px; font-size: 11px;"></div>
                             <div class="course-info-meta" style="margin-top: 4px; font-size: 11px;"><strong>Práctica:</strong> <input type="text" id="det-practica" value="Miércoles 8:40 AM - 10:20 AM" style="width: 100%; max-width: 250px; font-size: 11px;"></div>
 
@@ -1177,15 +1224,15 @@
             <h3>Editar Información de Usuario</h3>
             <div class="form-group">
                 <label>Nombre y Apellidos</label>
-                <input type="text" id="edit-name" value="pepito">
+                <input type="text" id="edit-name" value="Alvaro Alata">
             </div>
             <div class="form-group">
                 <label>Código de Estudiante</label>
-                <input type="text" id="edit-code" value="1919829107">
+                <input type="text" id="edit-code" value="100224207">
             </div>
             <div class="form-group">
                 <label>Correo Institucional</label>
-                <input type="email" id="edit-email" value="102323237@cientifica.edu.pe">
+                <input type="email" id="edit-email" value="100224207@cientifica.edu.pe">
             </div>
             <div class="form-group">
                 <label>Subir Foto desde tu Galería</label>
@@ -1350,4 +1397,4 @@
         }
     </script>
 </body>
-</html>  
+</html>
