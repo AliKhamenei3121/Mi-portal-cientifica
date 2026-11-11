@@ -40,7 +40,7 @@
 
         .hidden { display: none !important; }
 
-        /* Estilo del Logo Oficial UCSUR Corregido (Sin A naranja) */
+        /* Estilo del Logo Oficial UCSUR (Sin A naranja) */
         .ucsour-logo {
             display: inline-flex;
             flex-direction: column;
@@ -432,76 +432,89 @@
         /* Content Area */
         .content-area {
             flex: 1;
-            padding: 25px 30px;
+            padding: 30px;
             display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 25px;
+            grid-template-columns: 1fr 310px;
+            gap: 30px;
         }
 
         .section-title {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 700;
-            color: #222;
-            margin-bottom: 15px;
+            color: #1a2b4c;
+            margin-bottom: 18px;
         }
 
-        /* Welcome Banner Card (Igual a la foto 2) */
+        /* Welcome Card */
         .welcome-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 25px 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-            margin-bottom: 25px;
-            border: 1px solid #eef1f6;
+            background: linear-gradient(135deg, #1b4985 0%, #0b3c5d 100%);
+            border-radius: 20px;
+            padding: 30px 35px;
+            color: white;
+            box-shadow: 0 8px 25px rgba(27,73,133,0.2);
+            margin-bottom: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            overflow: hidden;
         }
-
+        .welcome-card::after {
+            content: '';
+            position: absolute;
+            right: -30px;
+            bottom: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            pointer-events: none;
+        }
         .welcome-text h2 {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 700;
-            color: #1a2b4c;
             margin-bottom: 8px;
         }
-
         .welcome-text p {
-            font-size: 12px;
-            color: #666;
+            font-size: 13px;
+            opacity: 0.9;
             font-style: italic;
-            max-width: 450px;
-            line-height: 1.4;
+            max-width: 480px;
+            line-height: 1.5;
         }
-
         .welcome-illustration {
-            width: 110px;
+            width: 95px;
             height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
         }
 
         /* News Section */
         .news-container-box {
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             overflow: hidden;
             border: 1px solid #eef1f6;
         }
 
         .news-item {
             display: flex;
-            gap: 20px;
-            padding: 20px;
+            gap: 22px;
+            padding: 22px;
             border-bottom: 1px solid #f0f3f8;
             align-items: flex-start;
+            transition: background 0.2s;
         }
+        .news-item:hover { background: #fafbfc; }
         .news-item:last-child { border-bottom: none; }
 
         .news-banner {
-            width: 170px;
-            height: 110px;
-            border-radius: 8px;
+            width: 180px;
+            height: 115px;
+            border-radius: 10px;
             object-fit: cover;
             flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .news-content { flex: 1; }
@@ -511,94 +524,101 @@
             color: var(--accent-blue);
             font-size: 10px;
             font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 4px;
+            padding: 4px 10px;
+            border-radius: 6px;
             display: inline-block;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             text-transform: uppercase;
         }
 
         .news-content h3 {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
-            color: #111;
+            color: #1a2b4c;
             margin-bottom: 6px;
-            line-height: 1.3;
+            line-height: 1.35;
         }
 
         .news-content p {
-            font-size: 11px;
-            color: #666;
-            margin-bottom: 10px;
-            line-height: 1.4;
+            font-size: 11.5px;
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.5;
         }
 
         .news-link {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--accent-blue);
             font-weight: 700;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
         .news-link:hover { text-decoration: underline; }
 
         /* Right Panel Widgets */
         .widget-card {
             background: #ffffff;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-            margin-bottom: 20px;
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            margin-bottom: 22px;
             border: 1px solid #eef1f6;
         }
 
         .date-title-widget {
-            font-size: 13px;
+            font-size: 13.5px;
             font-weight: 700;
-            color: #333;
+            color: #1a2b4c;
             margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
         }
 
         .schedule-box {
             text-align: center;
-            padding: 10px 0;
+            padding: 12px 0;
         }
 
         .schedule-icon-circle {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             background: #fff6ee;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 10px auto;
+            margin: 0 auto 12px auto;
             color: var(--accent-orange);
-            font-size: 26px;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(242,139,36,0.15);
         }
 
-        .schedule-box p { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 2px; }
-        .schedule-box span { font-size: 11px; color: #777; display: block; margin-bottom: 10px; }
+        .schedule-box p { font-size: 12.5px; font-weight: 700; color: #333; margin-bottom: 4px; }
+        .schedule-box span { font-size: 11px; color: #777; display: block; margin-bottom: 12px; }
         .ver-horario-link { font-size: 12px; color: var(--accent-blue); font-weight: 700; text-decoration: none; }
         .ver-horario-link:hover { text-decoration: underline; }
 
-        .quick-links-list { display: flex; flex-direction: column; gap: 14px; }
-        .quick-link-item { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #333; }
+        .quick-links-list { display: flex; flex-direction: column; gap: 16px; }
+        .quick-link-item { display: flex; align-items: center; gap: 14px; text-decoration: none; color: #333; transition: transform 0.2s; }
+        .quick-link-item:hover { transform: translateX(3px); }
         .quick-icon {
-            width: 34px;
-            height: 34px;
-            border-radius: 8px;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
             background: #f0f4f9;
             color: var(--accent-blue);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 15px;
             flex-shrink: 0;
         }
-        .quick-text h5 { font-size: 12px; font-weight: 700; }
-        .quick-text p { font-size: 10px; color: #777; }
+        .quick-text h5 { font-size: 12px; font-weight: 700; color: #1a2b4c; }
+        .quick-text p { font-size: 10.5px; color: #777; }
 
-        /* ==================== VISTA NOTAS ==================== */
+        /* ==================== VISTA NOTAS & GESTIÓN DE CURSOS ==================== */
         #notes-view {
             padding: 30px;
             flex: 1;
@@ -609,6 +629,14 @@
             display: flex;
             gap: 20px;
             margin-bottom: 25px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filters-left {
+            display: flex;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
@@ -640,22 +668,41 @@
             border-radius: 6px;
         }
 
+        .btn-add-course {
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 3px 10px rgba(0,102,204,0.2);
+            transition: background 0.2s;
+        }
+        .btn-add-course:hover { background: #0052a3; }
+
         .notes-main-layout {
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 290px 1fr;
             gap: 25px;
         }
 
         .courses-sidebar-list {
             background: white;
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid #eef1f6;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            max-height: 520px;
+            overflow-y: auto;
         }
 
         .course-nav-btn {
-            padding: 16px 20px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -678,18 +725,38 @@
 
         .course-detail-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 25px 30px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             border: 1px solid #eef1f6;
             overflow-x: auto;
+            position: relative;
         }
+
+        .btn-delete-course {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            background: #fff0f0;
+            color: #d9534f;
+            border: 1px solid #f5c6cb;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+        .btn-delete-course:hover { background: #d9534f; color: white; }
 
         .grades-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
             min-width: 400px;
         }
 
@@ -766,7 +833,7 @@
         }
         .whatsapp-btn:hover { transform: scale(1.08); }
 
-        /* Modal Editor de Usuario */
+        /* Modal Editor / Creación */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -786,7 +853,7 @@
             padding: 25px 30px;
             border-radius: 16px;
             width: 100%;
-            max-width: 380px;
+            max-width: 400px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
@@ -980,8 +1047,8 @@
             <div class="user-profile-btn" id="user-profile-toggle" onclick="toggleDropdown(event)">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" id="header-avatar" class="user-avatar-img" alt="Foto Usuario">
                 <div class="user-details-text">
-                    <div class="user-name-display" id="display-name">Alvaro Alata</div>
-                    <div class="user-code-display" id="display-code">100224207</div>
+                    <div class="user-name-display" id="display-name">Alex Torres</div>
+                    <div class="user-code-display" id="display-code">100582910</div>
                 </div>
                 <i class="fa-solid fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i>
             </div>
@@ -990,8 +1057,8 @@
         <!-- Dropdown Pop-up -->
         <div class="profile-dropdown hidden" id="profile-popup">
             <div class="dropdown-header-info">
-                <div class="dropdown-name" id="pop-name">Alvaro Alata</div>
-                <div class="dropdown-email" id="pop-email">100224207@cientifica.edu.pe</div>
+                <div class="dropdown-name" id="pop-name">Alex Torres</div>
+                <div class="dropdown-email" id="pop-email">100582910@cientifica.edu.pe</div>
             </div>
             <div class="dropdown-menu-item" onclick="abrirModalEditar()">
                 <i class="fa-regular fa-user"></i>
@@ -1076,45 +1143,59 @@
                 <!-- VISTA 1: INICIO -->
                 <main class="content-area" id="view-inicio">
                     <div class="left-main-content">
-                        <!-- Tarjeta de Bienvenida exacta a la foto 2 -->
+                        <!-- Tarjeta de Bienvenida -->
                         <div class="welcome-card">
                             <div class="welcome-text">
-                                <h2>¡Hola Alvaro! Bienvenido.</h2>
+                                <h2 id="welcome-title">¡Hola Estudiante! Bienvenido.</h2>
                                 <p>"Esfuérzate, supera las dificultades y crea tu propia historia de éxito"</p>
-                                <span style="font-size: 10px; color: #888; display: block; margin-top: 4px;">Fernando H. Lee</span>
+                                <span style="font-size: 10.5px; opacity: 0.8; display: block; margin-top: 6px;">Fernando H. Lee</span>
                             </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="welcome-illustration" alt="Estudiante Ilustración">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="welcome-illustration" alt="Ilustración">
                         </div>
 
                         <div class="section-title">Eventos y Noticias</div>
                         <div class="news-container-box">
+                            <!-- Noticia 1 -->
                             <div class="news-item">
-                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="Noticia 1">
+                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="Antisoborno">
                                 <div class="news-content">
-                                    <span class="badge-new">NUEVO</span>
-                                    <h3>¡Prepárate para tu EC2! Segundo simulacro virtual</h3>
-                                    <p>Refuerza los cursos de Biología, Química o Química General en nuestro segundo simulacro gratuito. Practica y llega con más confianza a tu EC2.</p>
-                                    <a href="#" class="news-link">Conéctate aquí</a>
+                                    <span class="badge-new">OFICIAL</span>
+                                    <h3>Conoce nuestro Sistema de Gestión Antisoborno</h3>
+                                    <p>Conoce nuestra política, los objetivos y a los oficiales de función antisoborno que nos impulsan hacia una cultura de integridad.</p>
+                                    <a href="#" class="news-link">Revisa aquí <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
                                 </div>
                             </div>
 
+                            <!-- Noticia 2 -->
                             <div class="news-item">
-                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="Noticia 2">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="Soborno">
                                 <div class="news-content">
-                                    <span class="badge-new">NUEVO</span>
-                                    <h3>Capacitación: prevención del hostigamiento sexual | 5 nov</h3>
-                                    <p>Informarte también es cuidarte ❤️ Aprende a prevenir el hostigamiento sexual con especialistas en Derecho Laboral. Jueves 5 de noviembre, vía Teams.</p>
-                                    <a href="#" class="news-link">Ingresa aquí</a>
+                                    <span class="badge-new">GUÍA</span>
+                                    <h3>¿Qué es el soborno? Aprende a reconocerlo y reportarlo</h3>
+                                    <p>Conoce cómo puede presentarse, qué hacer si te lo proponen y cómo reportarlo de forma segura y confidencial.</p>
+                                    <a href="#" class="news-link">Conoce más <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
                                 </div>
                             </div>
 
+                            <!-- Noticia 3 -->
                             <div class="news-item">
-                                <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="Noticia 3">
+                                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="WhatsApp">
                                 <div class="news-content">
-                                    <span class="badge-new">NUEVO</span>
-                                    <h3>✨ Conversa Científica: no todo se mide en la nota final</h3>
-                                    <p>Reconoce tu esfuerzo y cuídate en la recta final del ciclo. Tu asistencia equivale a 2 horas extracurriculares.</p>
-                                    <a href="#" class="news-link">Inscríbete aquí</a>
+                                    <span class="badge-new">COMUNIDAD</span>
+                                    <h3>Únete a Científica Noticias y entérate primero</h3>
+                                    <p>Recibe en tu celular las novedades, fechas importantes y actividades de la universidad directamente en tu WhatsApp.</p>
+                                    <a href="#" class="news-link">Súmate aquí <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Noticia 4 -->
+                            <div class="news-item">
+                                <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=400&q=80" class="news-banner" alt="Colombia">
+                                <div class="news-content">
+                                    <span class="badge-new">INTERNACIONAL</span>
+                                    <h3>¡Colombia te espera! Postulaciones abiertas 2027-1</h3>
+                                    <p>¿Te imaginas estudiar un ciclo en Colombia? Ya están abiertas las convocatorias de intercambio internacional.</p>
+                                    <a href="#" class="news-link">Postula aquí <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -1145,6 +1226,10 @@
                                     <div class="quick-icon"><i class="fa-solid fa-book-bookmark"></i></div>
                                     <div class="quick-text"><h5>Biblioteca virtual</h5><p>Red de bibliotecas</p></div>
                                 </a>
+                                <a href="#" class="quick-link-item">
+                                    <div class="quick-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                    <div class="quick-text"><h5>Bolsa de trabajo</h5><p>Trabajo y Prácticas</p></div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1153,36 +1238,40 @@
                 <!-- VISTA 2: NOTAS -->
                 <div id="view-notas" class="hidden" style="flex: 1; padding: 25px;">
                     <div class="notes-top-filters">
-                        <div class="filter-group">
-                            <label>Programa o carrera</label>
-                            <input type="text" id="input-carrera" class="filter-select" value="Estomatologia">
+                        <div class="filters-left">
+                            <div class="filter-group">
+                                <label>Programa o carrera</label>
+                                <input type="text" id="input-carrera" class="filter-select" value="Estomatología">
+                            </div>
+                            <div class="filter-group">
+                                <label>Ciclo</label>
+                                <input type="text" id="input-ciclo" class="filter-select" value="2026-2">
+                            </div>
                         </div>
-                        <div class="filter-group">
-                            <label>Ciclo</label>
-                            <input type="text" id="input-ciclo" class="filter-select" value="2026-2">
-                        </div>
+                        <button class="btn-add-course" onclick="abrirModalNuevoCurso()">
+                            <i class="fa-solid fa-plus"></i> Agregar Nuevo Curso
+                        </button>
                     </div>
 
                     <div class="notes-main-layout">
                         <!-- Lista lateral de cursos -->
                         <div class="courses-sidebar-list" id="sidebar-cursos-notas">
-                            <div class="course-nav-btn active" onclick="seleccionarCurso(0)">Biología <i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="course-nav-btn" onclick="seleccionarCurso(1)">Educacion Ambiental <i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="course-nav-btn" onclick="seleccionarCurso(2)">Expresion Artistica <i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="course-nav-btn" onclick="seleccionarCurso(3)">Ingles <i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="course-nav-btn" onclick="seleccionarCurso(4)">Matematica General <i class="fa-solid fa-chevron-right"></i></div>
-                            <div class="course-nav-btn" onclick="seleccionarCurso(5)">Quimica <i class="fa-solid fa-chevron-right"></i></div>
+                            <!-- Se llena dinámicamente -->
                         </div>
 
                         <!-- Detalle y notas del curso -->
                         <div class="course-detail-card">
-                            <div style="margin-bottom: 15px;">
-                                <input type="text" id="det-nombre-curso" value="Biología" style="font-size: 18px; font-weight: 700; color: #1b4985; width: 100%; max-width: 300px;" oninput="sincronizarNombreCurso()">
+                            <button class="btn-delete-course" onclick="eliminarCursoActual()">
+                                <i class="fa-solid fa-trash-can"></i> Eliminar Curso
+                            </button>
+
+                            <div style="margin-bottom: 15px; padding-right: 120px;">
+                                <input type="text" id="det-nombre-curso" value="" style="font-size: 18px; font-weight: 700; color: #1b4985; width: 100%;" oninput="sincronizarNombreCurso()">
                             </div>
                             
-                            <div class="course-info-meta" style="font-size: 11px;"><strong>Docente:</strong> <input type="text" id="det-docente" value="Kingleono" style="width: 100%; font-size: 11px; margin-top: 2px;"></div>
-                            <div class="course-info-meta" style="margin-top: 6px; font-size: 11px;"><strong>Teoría:</strong> <input type="text" id="det-teoria" value="Lunes 7:00 AM - 8:40 AM" style="width: 100%; max-width: 250px; font-size: 11px;"></div>
-                            <div class="course-info-meta" style="margin-top: 4px; font-size: 11px;"><strong>Práctica:</strong> <input type="text" id="det-practica" value="Miércoles 8:40 AM - 10:20 AM" style="width: 100%; max-width: 250px; font-size: 11px;"></div>
+                            <div class="course-info-meta" style="font-size: 11px;"><strong>Docente:</strong> <input type="text" id="det-docente" value="" style="width: 100%; font-size: 11px; margin-top: 2px;" oninput="sincronizarDetalles()"></div>
+                            <div class="course-info-meta" style="margin-top: 6px; font-size: 11px;"><strong>Teoría:</strong> <input type="text" id="det-teoria" value="" style="width: 100%; max-width: 250px; font-size: 11px;" oninput="sincronizarDetalles()"></div>
+                            <div class="course-info-meta" style="margin-top: 4px; font-size: 11px;"><strong>Práctica:</strong> <input type="text" id="det-practica" value="" style="width: 100%; max-width: 250px; font-size: 11px;" oninput="sincronizarDetalles()"></div>
 
                             <table class="grades-table">
                                 <thead>
@@ -1224,15 +1313,15 @@
             <h3>Editar Información de Usuario</h3>
             <div class="form-group">
                 <label>Nombre y Apellidos</label>
-                <input type="text" id="edit-name" value="Alvaro Alata">
+                <input type="text" id="edit-name" value="Alex Torres">
             </div>
             <div class="form-group">
                 <label>Código de Estudiante</label>
-                <input type="text" id="edit-code" value="100224207">
+                <input type="text" id="edit-code" value="100582910">
             </div>
             <div class="form-group">
                 <label>Correo Institucional</label>
-                <input type="email" id="edit-email" value="100224207@cientifica.edu.pe">
+                <input type="email" id="edit-email" value="100582910@cientifica.edu.pe">
             </div>
             <div class="form-group">
                 <label>Subir Foto desde tu Galería</label>
@@ -1249,15 +1338,45 @@
         </div>
     </div>
 
+    <!-- Modal Agregar Curso -->
+    <div class="modal-overlay hidden" id="modal-nuevo-curso">
+        <div class="modal-content">
+            <h3>Agregar Nuevo Curso</h3>
+            <div class="form-group">
+                <label>Nombre del Curso</label>
+                <input type="text" id="nuevo-curso-nombre" placeholder="Ej. Anatomía Humana">
+            </div>
+            <div class="form-group">
+                <label>Docente</label>
+                <input type="text" id="nuevo-curso-docente" placeholder="Ej. Dr. Roberto Gómez">
+            </div>
+            <div class="form-group">
+                <label>Horario de Teoría</label>
+                <input type="text" id="nuevo-curso-teoria" placeholder="Ej. Lunes 8:00 AM - 10:00 AM">
+            </div>
+            <div class="form-group">
+                <label>Horario de Práctica</label>
+                <input type="text" id="nuevo-curso-practica" placeholder="Ej. Miércoles 10:00 AM - 12:00 PM">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="cerrarModalNuevoCurso()">Cancelar</button>
+                <button class="btn-save" onclick="agregarCursoConfirmar()">Crear Curso</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         let cursoSeleccionadoIndex = 0;
-        const datosCursos = [
+        let datosCursos = JSON.parse(localStorage.getItem('portal_cursos')) || [
             { nombre: "Biología", docente: "Kingleono", teoria: "Lunes 7:00 AM - 8:40 AM", practica: "Miércoles 8:40 AM - 10:20 AM" },
-            { nombre: "Educacion Ambiental", docente: "Carlos iz", teoria: "Martes 9:00 AM - 10:40 AM", practica: "Jueves 11:00 AM - 12:40 PM" },
+            { nombre: "Educacion Ambiental", docente: "Carlos Iz", teoria: "Martes 9:00 AM - 10:40 AM", practica: "Jueves 11:00 AM - 12:40 PM" },
             { nombre: "Expresion Artistica", docente: "Ana Torres", teoria: "Miércoles 2:00 PM - 3:40 PM", practica: "Viernes 2:00 PM - 3:40 PM" },
             { nombre: "Ingles", docente: "John Smith", teoria: "Lunes 10:00 AM - 11:40 AM", practica: "Miércoles 10:00 AM - 11:40 AM" },
             { nombre: "Matematica General", docente: "Rosa Laura Gomez", teoria: "Martes 2:00 PM - 3:40 PM", practica: "Jueves 2:00 PM - 3:40 PM" },
-            { nombre: "Quimica", docente: "Luis Alberto Cardenas", teoria: "Viernes 8:00 AM - 9:40 AM", practica: "Sábados 8:00 AM - 9:40 AM" }
+            { nombre: "Quimica", docente: "Luis Alberto Cardenas", teoria: "Viernes 8:00 AM - 9:40 AM", practica: "Sábados 8:00 AM - 9:40 AM" },
+            { nombre: "Anatomía Humana", docente: "Dr. Walter White", teoria: "Lunes 2:00 PM - 4:00 PM", practica: "Martes 2:00 PM - 4:00 PM" },
+            { nombre: "Fisiología General", docente: "Dra. Carmen Rosa", teoria: "Miércoles 4:00 PM - 6:00 PM", practica: "Viernes 4:00 PM - 6:00 PM" },
+            { nombre: "Genética", docente: "Dr. Julio César", teoria: "Jueves 8:00 AM - 10:00 AM", practica: "Sábados 10:00 AM - 12:00 PM" }
         ];
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -1265,7 +1384,22 @@
             if (savedData) {
                 actualizarUI(savedData.name, savedData.code, savedData.email, savedData.avatar);
             }
+            renderizarSidebarCursos();
+            if (datosCursos.length > 0) seleccionarCurso(0);
         });
+
+        function renderizarSidebarCursos() {
+            const sidebar = document.getElementById('sidebar-cursos-notas');
+            sidebar.innerHTML = '';
+            datosCursos.forEach((curso, idx) => {
+                const btn = document.createElement('div');
+                btn.className = `course-nav-btn ${idx === cursoSeleccionadoIndex ? 'active' : ''}`;
+                btn.innerHTML = `${curso.nombre} <i class="fa-solid fa-chevron-right" style="font-size:10px;"></i>`;
+                btn.onclick = () => seleccionarCurso(idx);
+                sidebar.appendChild(btn);
+            });
+            localStorage.setItem('portal_cursos', JSON.stringify(datosCursos));
+        }
 
         function toggleMobileSidebar() {
             const sidebar = document.getElementById('app-sidebar');
@@ -1284,6 +1418,7 @@
             } else if (vista === 'notas') {
                 document.getElementById('view-notas').classList.remove('hidden');
                 document.getElementById('nav-notas').classList.add('active');
+                renderizarSidebarCursos();
             }
 
             if (window.innerWidth <= 900) {
@@ -1292,8 +1427,13 @@
         }
 
         function seleccionarCurso(index) {
+            if (index >= datosCursos.length) index = datosCursos.length - 1;
+            if (index < 0) index = 0;
             cursoSeleccionadoIndex = index;
+            
             const curso = datosCursos[index];
+            if (!curso) return;
+
             document.getElementById('det-nombre-curso').value = curso.nombre;
             document.getElementById('det-docente').value = curso.docente;
             document.getElementById('det-teoria').value = curso.teoria;
@@ -1303,10 +1443,8 @@
             botones.forEach((btn, idx) => {
                 if (idx === index) {
                     btn.classList.add('active');
-                    btn.innerHTML = `${curso.nombre} <i class="fa-solid fa-chevron-right"></i>`;
                 } else {
                     btn.classList.remove('active');
-                    btn.innerHTML = `${datosCursos[idx].nombre} <i class="fa-solid fa-chevron-right"></i>`;
                 }
             });
         }
@@ -1314,8 +1452,62 @@
         function sincronizarNombreCurso() {
             const nuevoNombre = document.getElementById('det-nombre-curso').value;
             datosCursos[cursoSeleccionadoIndex].nombre = nuevoNombre;
-            const botones = document.querySelectorAll('.course-nav-btn');
-            botones[cursoSeleccionadoIndex].innerHTML = `${nuevoNombre} <i class="fa-solid fa-chevron-right"></i>`;
+            renderizarSidebarCursos();
+        }
+
+        function sincronizarDetalles() {
+            datosCursos[cursoSeleccionadoIndex].docente = document.getElementById('det-docente').value;
+            datosCursos[cursoSeleccionadoIndex].teoria = document.getElementById('det-teoria').value;
+            datosCursos[cursoSeleccionadoIndex].practica = document.getElementById('det-practica').value;
+            localStorage.setItem('portal_cursos', JSON.stringify(datosCursos));
+        }
+
+        function abrirModalNuevoCurso() {
+            document.getElementById('modal-nuevo-curso').classList.remove('hidden');
+        }
+
+        function cerrarModalNuevoCurso() {
+            document.getElementById('modal-nuevo-curso').classList.add('hidden');
+        }
+
+        function agregarCursoConfirmar() {
+            const nombre = document.getElementById('nuevo-curso-nombre').value.trim();
+            const docente = document.getElementById('nuevo-curso-docente').value.trim();
+            const teoria = document.getElementById('nuevo-curso-teoria').value.trim();
+            const practica = document.getElementById('nuevo-curso-practica').value.trim();
+
+            if (!nombre) {
+                alert("Por favor ingresa un nombre para el curso.");
+                return;
+            }
+
+            datosCursos.push({
+                nombre: nombre,
+                docente: docente || "Por asignar",
+                teoria: teoria || "Por definir",
+                practica: practica || "Por definir"
+            });
+
+            cerrarModalNuevoCurso();
+            renderizarSidebarCursos();
+            seleccionarCurso(datosCursos.length - 1);
+
+            document.getElementById('nuevo-curso-nombre').value = '';
+            document.getElementById('nuevo-curso-docente').value = '';
+            document.getElementById('nuevo-curso-teoria').value = '';
+            document.getElementById('nuevo-curso-practica').value = '';
+        }
+
+        function eliminarCursoActual() {
+            if (datosCursos.length <= 1) {
+                alert("Debes tener al menos un curso registrado.");
+                return;
+            }
+            if (confirm(`¿Estás seguro de eliminar el curso "${datosCursos[cursoSeleccionadoIndex].nombre}"?`)) {
+                datosCursos.splice(cursoSeleccionadoIndex, 1);
+                renderizarSidebarCursos();
+                seleccionarCurso(0);
+            }
         }
 
         function ejecutarLogin() {
@@ -1363,6 +1555,7 @@
             document.getElementById('pop-name').innerText = name;
             document.getElementById('pop-email').innerText = email;
             document.getElementById('header-avatar').src = avatar;
+            document.getElementById('welcome-title').innerText = `¡Hola ${name.split(' ')[0]}! Bienvenido.`;
 
             document.getElementById('edit-name').value = name;
             document.getElementById('edit-code').value = code;
